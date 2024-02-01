@@ -7,9 +7,15 @@ const Stack = createStackNavigator();
 
 export const StackNavegacion = ()=> {
   return (
-    <Stack.Navigator>
+    <Stack.Navigator
+    screenOptions={{
+        headerShown: false,
+        cardStyle:{
+            backgroundColor:'white',
+        },
+    }}>
       <Stack.Screen name="HomeScreen" component={HomeScreen} />
-      <Stack.Screen name="Detalles" component={DetallesScreen} />
+      <Stack.Screen name="DetallesScreen" component={DetallesScreen} />
     </Stack.Navigator>
   );
 };
