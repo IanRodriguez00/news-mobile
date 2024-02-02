@@ -12,6 +12,8 @@ Nos permite visualizar las noticias obtenidas de la API, haciendo uso de un hook
 
 ## Screen detalles
 Nos permite ver los detalles de la noticia a la que se le haga click en el "leer más"
+
+
 ![image](https://github.com/IanRodriguez00/news-mobile/assets/74162126/a1b1e11a-950b-4db3-a39f-02dc6dfeeba4)
 
 
