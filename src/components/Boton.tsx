@@ -9,10 +9,13 @@ interface propsboton  {
 const Boton = ({item, onpress}:propsboton) => {
   const titulo = item.title;
   const uri = item.urlToImage;
+
   const descripcion = item.description;
   return (
     <View style={styles.Contenedor}>
-            {uri ? <Image source={uri} style={styles.imagen}/> : undefined}
+      <View >
+          {uri ? <Image source={{uri}} style={styles.imagen}/> : undefined}
+      </View>
             <Text style={styles.titulo}>{titulo}</Text>
             <Text style={styles.descripcionTexto}>{descripcion}</Text>
             <TouchableOpacity
@@ -56,7 +59,7 @@ const styles = StyleSheet.create({
     height:1,
   },
   imagen:{
-    height:100,
+    height:300,
     width:'auto',
   },
 });

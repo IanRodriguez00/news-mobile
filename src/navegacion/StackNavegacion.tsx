@@ -20,13 +20,16 @@ export const StackNavegacion = ()=> {
   return (
     <Stack.Navigator
     screenOptions={{
-        headerShown: false,
+      headerStyle:{
+        elevation:0,
+        shadowColor:'transparent',
+      },
         cardStyle:{
             backgroundColor:'white',
         },
     }}>
-      <Stack.Screen name="HomeScreen" component={HomeScreen} />
-      <Stack.Screen name="DetallesScreen" component={DetallesScreen} />
+      <Stack.Screen name="HomeScreen" options={{title:"Noticias"}} component={HomeScreen} />
+      <Stack.Screen name="DetallesScreen" options={{title:"Más"}} component={DetallesScreen} />
     </Stack.Navigator>
   );
 };

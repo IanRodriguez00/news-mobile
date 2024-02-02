@@ -3,7 +3,7 @@ import useNoticias from '../hooks/useNoticias';
 import Boton from '../components/Boton';
 import { StackScreenProps } from '@react-navigation/stack';
 import { FlatList } from 'react-native-gesture-handler';
-import { StyleSheet, View } from 'react-native';
+import {View } from 'react-native';
 import { useSafeAreaInsets } from 'react-native-safe-area-context';
 interface Props extends StackScreenProps<any, any>{}
 
@@ -27,9 +27,5 @@ const HomeScreen = ({navigation}: Props) => {
 };
 
 export default HomeScreen;
-const styles = StyleSheet.create({
-  contenedor:{
 
-  },
-})
 
