@@ -11,3 +11,7 @@ Nos permite visualizar las noticias obtenidas de la API, haciendo uso de un hook
 ![image](https://github.com/IanRodriguez00/news-mobile/assets/74162126/0cd61e4c-2b87-4303-8aaa-18e775e2fe17)
 
 ## Screen detalles
+
+
+## APK
+https://1drv.ms/u/s!Aqv_gRMbK32KgrU7TsPwcB0V_ssMBQ?e=hS8COZ
