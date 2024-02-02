@@ -1,5 +1,5 @@
-<h1>News-app</h1>
-<br>
+News-app
+
 Aplicacion que cosiste de dos screens difentes
 1. Noticias
 1. Detalles
