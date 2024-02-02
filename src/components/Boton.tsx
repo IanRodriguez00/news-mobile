@@ -1,29 +1,62 @@
 import React from 'react';
-import {  Text, View, TouchableOpacity } from 'react-native';
-import { useSafeAreaInsets } from 'react-native-safe-area-context';
+import { Text, View, TouchableOpacity, StyleSheet, Image} from 'react-native';
+import { Noticias } from '../interfaces/NoticiasInterfaces';
 
 interface propsboton  {
- text: string,
- onpress?: ()=> void,
+ item: Noticias;
+ onpress: ()=>void;
 }
-
-const Boton = ({text, onpress}:propsboton) => { 
-const insets = useSafeAreaInsets();
+const Boton = ({item, onpress}:propsboton) => {
+  const titulo = item.title;
+  const uri = item.urlToImage;
+  const descripcion = item.description;
   return (
-    <View style={{
-        flex: 1,
-        marginTop: insets.top,
-      }}>
-        <TouchableOpacity onPress={onpress}>
-            <View style={{
-                backgroundColor: 'red',
-                marginTop: 10,
-            }}>
-            <Text>{text}</Text>
-            </View>
-          </TouchableOpacity>
+    <View style={styles.Contenedor}>
+            {uri ? <Image source={uri} style={styles.imagen}/> : undefined}
+            <Text style={styles.titulo}>{titulo}</Text>
+            <Text style={styles.descripcionTexto}>{descripcion}</Text>
+            <TouchableOpacity
+            onPress={onpress}
+            style={styles.leermas}>
+                <Text style={styles.leermasTexto}
+                >Leer más</Text>
+            </TouchableOpacity>
+            <View style={styles.separacion}></View>
     </View>
   );
 };
-
 export default Boton;
+
+const styles = StyleSheet.create({
+  Contenedor:{
+    padding:20,
+    marginBottom:20,
+  },
+  titulo:{
+    fontSize:25,
+    color:'black',
+  },
+  descripcionTexto:{
+    fontSize:18,
+  },
+  leermas:{
+    flex:1,
+    justifyContent:'flex-end',
+    alignItems:'flex-end',
+    marginBottom:2,
+  },
+  leermasTexto:{
+    color:'blue',
+    fontSize:16,
+    textDecorationLine:'underline',
+  },
+  separacion:{
+    backgroundColor:'gray',
+    width:'auto',
+    height:1,
+  },
+  imagen:{
+    height:100,
+    width:'auto',
+  },
+});

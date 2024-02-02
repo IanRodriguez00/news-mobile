@@ -2,13 +2,19 @@ import React from 'react';
 import { createStackNavigator } from '@react-navigation/stack';
 import DetallesScreen from '../screens/DetallesScreen';
 import HomeScreen from '../screens/HomeScreen';
+import { Noticias } from '../interfaces/NoticiasInterfaces';
 
-export type stackNavegacionParam = {
-    HomeScreen: undefined,
-    DetallesScreen: undefined,
+// export type stackNavegacionParam = {
+//     HomeScreen: undefined,
+//     DetallesScreen: undefined,
+// }
+
+export type RootStackParams ={
+  HomeScreen: undefined,
+  DetallesScreen: {item: Noticias},
 }
 
-const Stack = createStackNavigator<stackNavegacionParam>();
+const Stack = createStackNavigator<RootStackParams>();
 
 export const StackNavegacion = ()=> {
   return (
