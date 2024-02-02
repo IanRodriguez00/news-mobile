@@ -23,7 +23,6 @@ const DetallesScreen = ({route}:Props) => {
         <View style={styles.textoDateAutor}>
         <Text >{publishedAt}</Text>
         <Text>{author}</Text>
-        
         </View>
     </View>
   );
