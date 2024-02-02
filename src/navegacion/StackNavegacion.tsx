@@ -21,8 +21,8 @@ export const StackNavegacion = ()=> {
     <Stack.Navigator
     screenOptions={{
       headerStyle:{
-        elevation:0,
         shadowColor:'transparent',
+        backgroundColor:'#20B2AA',
       },
         cardStyle:{
             backgroundColor:'white',
