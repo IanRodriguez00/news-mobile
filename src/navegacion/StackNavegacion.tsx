@@ -3,7 +3,12 @@ import { createStackNavigator } from '@react-navigation/stack';
 import DetallesScreen from '../screens/DetallesScreen';
 import HomeScreen from '../screens/HomeScreen';
 
-const Stack = createStackNavigator();
+export type stackNavegacionParam = {
+    HomeScreen: undefined,
+    DetallesScreen: undefined,
+}
+
+const Stack = createStackNavigator<stackNavegacionParam>();
 
 export const StackNavegacion = ()=> {
   return (
